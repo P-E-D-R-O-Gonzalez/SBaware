@@ -1,9 +1,9 @@
 {
   "backend": {
     "name": "github",
-    "repo": "P-E-D-R-O-Gonzalez/hub",
+    "repo": "P-E-D-R-O-Gonzalez/test",
     "branch": "main",
-    "base_url": "https://hub.pdgonzalez2004.workers.dev",
+    "base_url": "https://test.pg77773333.workers.dev",
     "auth_endpoint": "api/auth"
   },
   "local_backend": true,
@@ -411,5 +411,7 @@
         }
       ]
     }
-  ]
+  ],
+  "site_url": "https://test.pg77773333.workers.dev",
+  "display_url": "https://test.pg77773333.workers.dev"
 }
