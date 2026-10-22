@@ -1,0 +1,24 @@
+{
+  "name": "hub",
+  "type": "module",
+  "version": "0.0.1",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "setup": "node scripts/setup.mjs",
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "astro": "^7.3.3",
+    "decap-cms-app": "^3.16.3",
+    "rss-parser": "^3.13.0",
+    "wrangler": "^4.139.0"
+  },
+  "allowScripts": {
+    "esbuild": true
+  }
+}

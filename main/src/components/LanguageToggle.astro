@@ -1,0 +1,73 @@
+---
+import content from '../data/branding.json';
+import { readBranding } from '../lib/branding';
+const { slogan } = readBranding(content);
+---
+<div class="top-bar">
+  {slogan && <p class="slogan">{slogan}</p>}
+<div class="language-bar" role="group" aria-label="Language / Idioma">
+  <button type="button" data-language="en" lang="en" aria-pressed="true">English</button>
+  <button type="button" data-language="es" lang="es" aria-pressed="false">Español</button>
+</div>
+</div>
+
+<script>
+  import { translate } from '../lib/translations';
+
+  let language = 'en';
+  try { if (localStorage.getItem('site-language') === 'es') language = 'es'; } catch {}
+  const buttons = document.querySelectorAll<HTMLButtonElement>('[data-language]');
+  const attributes = ['aria-label', 'title', 'data-title'];
+  const originals = new WeakMap<Node, Map<string, { original: string; rendered: string }>>();
+  function localize(node: Node, key: string, current: string) {
+    let values = originals.get(node);
+    if (!values) { values = new Map(); originals.set(node, values); }
+    const previous = values.get(key);
+    const original = previous?.rendered === current ? previous.original : current;
+    const rendered = language === 'es' ? translate(original, language) : original;
+    values.set(key, { original, rendered });
+    return rendered;
+  }
+  // Observe site copy so weather responses and panel controls also use the selected language.
+  // Text nodes preserve child elements, event handlers, selected options, and loaded embeds.
+  function translatePage() {
+    observer.disconnect();
+    const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+    while (walker.nextNode()) {
+      const node = walker.currentNode;
+      if (node.parentElement?.closest('script, style, noscript, .language-bar, [translate="no"]')) continue;
+      const value = localize(node, 'text', node.textContent ?? '');
+      if (value !== node.textContent) node.textContent = value;
+    }
+    document.querySelectorAll<HTMLElement>('[aria-label], [title], [data-title]').forEach(element => {
+      if (element.closest('.language-bar, [translate="no"]')) return;
+      attributes.forEach(attribute => {
+        const value = element.getAttribute(attribute);
+        if (value !== null) element.setAttribute(attribute, localize(element, attribute, value));
+      });
+    });
+    observer.observe(document.body, { childList: true, subtree: true, characterData: true, attributes: true, attributeFilter: attributes });
+  }
+  const observer = new MutationObserver(translatePage);
+  function applyLanguage() {
+    document.documentElement.lang = language;
+    buttons.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.language === language)));
+    translatePage();
+    window.dispatchEvent(new Event('languagechange'));
+  }
+  buttons.forEach(button => button.addEventListener('click', () => {
+    language = button.dataset.language === 'es' ? 'es' : 'en';
+    try { localStorage.setItem('site-language', language); } catch {}
+    applyLanguage();
+  }));
+  applyLanguage();
+</script>
+
+<style>
+  .top-bar { position: relative; z-index: 2; display: flex; align-items: center; flex-wrap: wrap; gap: 10px 24px; padding: 10px clamp(16px, 3vw, 40px); background: #f5f5f3; border-bottom: 1px solid #d9dcd6; }
+  .slogan { flex: 1 1 240px; min-width: 0; margin: 0; color: #242724; font: 600 16px/1.5 Arial, sans-serif; overflow-wrap: anywhere; }
+  .language-bar { display: flex; justify-content: flex-end; flex: 0 0 auto; gap: 4px; margin-left: auto; }
+  button { min-height: 44px; padding: 8px 16px; border: 1px solid #596650; border-radius: 8px; background: white; color: #242724; font: 600 14px/1.4 Arial, sans-serif; cursor: pointer; }
+  button[aria-pressed="true"] { background: #46553d; color: white; }
+  button:focus-visible { outline: 3px solid #426b88; outline-offset: 3px; }
+</style>

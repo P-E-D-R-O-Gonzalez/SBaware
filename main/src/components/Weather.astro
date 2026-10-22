@@ -1,0 +1,74 @@
+---
+import content from '../data/weather.json';
+import { readWeather } from '../lib/weather';
+const weather = readWeather(content);
+---
+{weather.enabled && <section class="conditions" aria-label={`Weather for ${weather.city}`} data-weather-url={weather.weatherUrl} data-air-url={weather.airUrl} data-temperature-suffix={weather.temperatureSuffix} data-wind-suffix={weather.windSuffix}>
+  <dl aria-live="polite">
+    <div><dt>Temperature</dt><dd id="temperature">Loading...</dd></div>
+    <div><dt>Air quality (US AQI)</dt><dd id="air-quality">Loading...</dd></div>
+    <div><dt>Wind</dt><dd id="wind">Loading...</dd></div>
+  </dl>
+  <small><span translate="no">{weather.city}</span> &middot; <span>Data:</span> <a href="https://open-meteo.com/">Open-Meteo</a> / <a href="https://atmosphere.copernicus.eu/">CAMS</a></small>
+</section>}
+
+<script>
+  const root = document.querySelector<HTMLElement>('.conditions');
+  if (root) {
+  const weatherUrl = new URL(root.dataset.weatherUrl!);
+  const airUrl = new URL(root.dataset.airUrl!);
+
+  function display(id: string, value: string) {
+    const element = document.getElementById(id);
+    if (element) element.textContent = value;
+  }
+
+  function format(value: unknown, unit: string) {
+    return typeof value === 'number' && Number.isFinite(value)
+      ? `${Math.round(value)}${unit}` : 'Unavailable';
+  }
+
+  async function getCurrent(url: URL): Promise<Record<string, unknown>> {
+    const response = await fetch(url, { signal: AbortSignal.timeout(15000) });
+    if (!response.ok) throw new Error(`Open-Meteo returned ${response.status}`);
+    const data = await response.json();
+    if (!data.current || typeof data.current !== 'object') throw new Error('Missing current data');
+    return data.current;
+  }
+
+  async function updateConditions() {
+    await Promise.allSettled([
+      (async () => {
+        try {
+          const current = await getCurrent(weatherUrl);
+          display('temperature', format(current.temperature_2m, root.dataset.temperatureSuffix!));
+          display('wind', format(current.wind_speed_10m, root.dataset.windSuffix!));
+        } catch {
+          display('temperature', 'Unavailable');
+          display('wind', 'Unavailable');
+        }
+      })(),
+      (async () => {
+        try {
+          const current = await getCurrent(airUrl);
+          display('air-quality', format(current.us_aqi, ''));
+        } catch {
+          display('air-quality', 'Unavailable');
+        }
+      })(),
+    ]);
+  }
+
+  void updateConditions();
+  window.setInterval(() => void updateConditions(), 15 * 60 * 1000);
+  }
+</script>
+
+<style>
+  .conditions { font-size: 14px; }
+  dl { display: flex; flex-wrap: wrap; gap: 16px 24px; margin: 0 0 8px; }
+  dt { color: #62685e; font-size: 12px; margin-bottom: 4px; }
+  dd { margin: 0; font-size: 18px; font-weight: 600; font-variant-numeric: tabular-nums; }
+  small { color: #62685e; font-size: 11px; }
+  a { color: inherit; text-underline-offset: 2px; }
+</style>
