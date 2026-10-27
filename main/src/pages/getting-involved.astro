@@ -1,4 +1,5 @@
 ---
+import MountainRange from '../components/MountainRange.astro';
 import Layout from '../layouts/Layout.astro';
 import BackToSite from '../components/BackToSite.astro';
 import Brand from '../components/Brand.astro';
@@ -8,8 +9,9 @@ const hasContent = rawContent().trim().length > 0;
 ---
 
 <Layout title="Get Involved">
-  <main class="getting-involved">
+  <main class="getting-involved mountain-theme mountain-page">
     <header>
+      <MountainRange />
       <div><Brand /></div>
       <BackToSite />
       <h1>Get Involved</h1>

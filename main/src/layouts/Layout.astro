@@ -1,4 +1,5 @@
 ---
+import '../styles/mountain-theme.css';
 import LanguageToggle from '../components/LanguageToggle.astro';
 import brandingContent from '../data/branding.json';
 import { readBranding } from '../lib/branding';
@@ -20,7 +21,7 @@ import '../lib/translations';
 		<meta name="generator" content={Astro.generator} />
 		<title>{title ? `${title} | ${branding.browserTitle}` : branding.browserTitle}</title>
 	</head>
-	<body>
+	<body class="site-theme">
 		<LanguageToggle />
 		<slot />
 	</body>
