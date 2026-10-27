@@ -55,7 +55,7 @@
       "description": "Watch the local city broadcast.",
       "button_label": "Load TV",
       "url": "https://reflect-sanbernardino.cablecast.tv/internetchannel/?channel=6",
-      "embed_url": "https://reflect-sanbernardino.cablecast.tv/internetchannel/?channel=6",
+      "embed_url": "https://reflect-sanbernardino.cablecast.tv/internetchannel/watch-now?channel=6",
       "panel_title": "TV"
     },
     {
