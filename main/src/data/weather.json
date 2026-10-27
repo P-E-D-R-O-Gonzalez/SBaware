@@ -1,8 +1,8 @@
 {
   "enabled": true,
-  "city": "Fontana 92335",
-  "latitude": 34.0923,
-  "longitude": -117.4343,
+  "city": "San Bernardino 92401",
+  "latitude": 34.115784,
+  "longitude": 117.302399,
   "temperature_unit": "fahrenheit",
   "wind_speed_unit": "mph"
 }
