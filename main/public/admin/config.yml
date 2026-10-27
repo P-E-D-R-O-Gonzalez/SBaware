@@ -212,6 +212,25 @@
           ]
         },
         {
+          "name": "about",
+          "label": "About",
+          "file": "main/src/data/about.md",
+          "fields": [
+            {
+              "name": "title",
+              "widget": "hidden",
+              "default": "About"
+            },
+            {
+              "name": "body",
+              "label": "Page content",
+              "widget": "markdown",
+              "required": false,
+              "hint": "Add content below the About heading. Leave empty to keep the page blank with its shared header and footer."
+            }
+          ]
+        },
+        {
           "name": "getting_involved",
           "label": "Get Involved",
           "file": "main/src/data/getting-involved.md",

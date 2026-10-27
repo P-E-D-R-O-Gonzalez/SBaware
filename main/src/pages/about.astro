@@ -1,5 +1,27 @@
 ---
 import HubPage from '../components/HubPage.astro';
 import homepage from '../data/homepage.json';
+import { Content, rawContent } from '../data/about.md';
+
+const hasContent = rawContent().trim().length > 0;
 ---
-<HubPage pageTitle="About" content={{ sections: [], footer_links: homepage.footer_links }} />
+<HubPage pageTitle="About" content={{ sections: [], footer_links: homepage.footer_links }}>
+  {hasContent && <div class="about-content"><Content /></div>}
+</HubPage>
+
+<style>
+  .about-content {
+    grid-column: 1 / -1;
+    min-width: 0;
+    padding: clamp(20px, 4vw, 36px);
+    border: 1px solid #d9dcd6;
+    border-radius: 12px;
+    background: #fff;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+  }
+  .about-content :global(> :first-child) { margin-top: 0; }
+  .about-content :global(> :last-child) { margin-bottom: 0; }
+  .about-content :global(img) { max-width: 100%; height: auto; }
+  .about-content :global(pre) { overflow-x: auto; }
+</style>
