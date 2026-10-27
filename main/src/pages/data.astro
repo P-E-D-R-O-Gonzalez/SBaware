@@ -1,0 +1,6 @@
+---
+import HubPage from '../components/HubPage.astro';
+import content from '../data/data.json';
+import homepage from '../data/homepage.json';
+---
+<HubPage pageTitle="Data" content={{ ...content, footer_links: homepage.footer_links }} />

@@ -29,14 +29,12 @@
       "panel_title": "On demand videos"
     },
     {
-      "type": "embed",
+      "type": "link",
       "enabled": true,
-      "title": "Your Page Name Data",
+      "title": "SB Aware City Data",
       "description": "Explore city maps and public data.",
-      "button_label": "Load City Data",
-      "url": "https://example.com",
-      "embed_url": "https://example.com",
-      "panel_title": "City open data"
+      "button_label": "View City Data",
+      "url": "/data/"
     },
     {
       "type": "embed",

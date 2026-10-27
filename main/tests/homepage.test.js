@@ -8,7 +8,9 @@ test('existing homepage migrates with its eight cards and footer', () => {
   const home = readHomepage(content);
   assert.equal(home.sections.length, 8);
   assert.equal(home.footer_links.length, 3);
-  assert.equal(home.sections[3].embed_url, 'https://example.com');
+  assert.equal(home.sections[3].type, 'link');
+  assert.equal(home.sections[3].url, '/data/');
+  assert.equal(home.sections[3].embed_url, '');
 });
 
 test('editors can reorder, hide, add text and remove all cards', () => {

@@ -1,0 +1,20 @@
+{
+  "sections": [
+    {
+      "type": "text",
+      "enabled": true,
+      "title": "City open data",
+      "description": "City data resources will be added here."
+    },
+    {
+      "type": "embed",
+      "enabled": true,
+      "title": "Flock Map",
+      "description": "Find mapped camera locations.",
+      "button_label": "Load Flock map",
+      "url": "https://maps.deflock.org/",
+      "embed_url": "https://maps.deflock.org/",
+      "panel_title": "Flock map"
+    }
+  ]
+}
