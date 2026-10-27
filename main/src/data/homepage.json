@@ -6,7 +6,7 @@
       "title": "Calendar",
       "description": "Meetings, agendas and attachments.",
       "button_label": "View calendar",
-      "url": "https://example.com"
+      "url": "https://sanbernardino.primegov.com/"
     },
     {
       "type": "embed",
@@ -14,13 +14,14 @@
       "title": "Traffic",
       "description": "Check nearby road conditions.",
       "button_label": "Load Traffic Cams",
-      "url": "https://example.com",
-      "embed_url": "https://example.com",
+      "url": "https://quickmap.dot.ca.gov",
+      "embed_url": "https://quickmap.dot.ca.gov/?view=34.1466%2C-117.3041%2C11&layers=border_wait%2Ccaltrans_districts%2Ccameras%2Cchp_incidents%2Ccms%2Ccounty_boundaries%2Cfull_closures%2Chighway_info%2Clane_closures%2Cspeed",
       "panel_title": "Traffic"
     },
     {
       "type": "embed",
       "enabled": true,
+<<<<<<< HEAD
       "title": "On Demand Videos",
       "description": "Watch recorded city programs.",
       "button_label": "Load Videos",
@@ -50,11 +51,44 @@
       "type": "embed",
       "enabled": true,
       "title": "Your Page name TV",
+=======
+      "title": "IEMG TV3",
+>>>>>>> ede959ce0c515eeb95125864a9e452a259e533b5
       "description": "Watch the local city broadcast.",
       "button_label": "Load TV",
-      "url": "https://example.com",
-      "embed_url": "https://example.com",
+      "url": "https://reflect-sanbernardino.cablecast.tv/internetchannel/?channel=6",
+      "embed_url": "https://reflect-sanbernardino.cablecast.tv/internetchannel/?channel=6",
       "panel_title": "TV"
+    },
+    {
+      "type": "link",
+      "enabled": true,
+      "title": "Gas Buddy",
+      "description": "Find the cheapest fuel no matter the type near you",
+      "button_label": "Find Cheap Gas",
+      "url": "https://www.gasbuddy.com/gaspricemap?lat=34.1045589&lng=-117.291869&z=13",
+      "embed_url": "",
+      "panel_title": "Find Cheap Gas"
+    },
+    {
+      "type": "link",
+      "enabled": true,
+      "title": "SB Data Hub",
+      "description": "Explore public city data.",
+      "button_label": "Explore City Data",
+      "url": "https://sb.ieaware/data",
+      "embed_url": "",
+      "panel_title": " open city data"
+    },
+    {
+      "type": "link",
+      "enabled": true,
+      "title": "ICE Activity",
+      "description": "Collection of ICE Activity sources",
+      "button_label": "Be Informed",
+      "url": "https://fontanaware.org/ice",
+      "embed_url": "",
+      "panel_title": ""
     },
     {
       "type": "link",
@@ -71,20 +105,20 @@
       "description": "Browse updates from local sources.",
       "button_label": "Load Local Media",
       "panel_title": "Local Media"
+    },
+    {
+      "type": "link",
+      "enabled": true,
+      "title": "Digital Letterbox",
+      "description": "Suggest a resource, report an outdated link, or share feedback.",
+      "button_label": "Send Feedback",
+      "url": "https://forms.gle/iPsVVdThTcscaAPo7"
     }
   ],
   "footer_links": [
     {
-      "label": "Report a city issue",
-      "url": "https://example.com"
-    },
-    {
-      "label": "Send feedback",
-      "url": "https://example.com"
-    },
-    {
-      "label": "Get involved",
-      "url": "/getting-involved/"
+      "label": "About Us",
+      "url": "https://fontanaware.org/about-us"
     }
   ]
 }
