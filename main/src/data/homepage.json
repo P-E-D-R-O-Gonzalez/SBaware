@@ -49,7 +49,7 @@
       "panel_title": " open city data"
     },
     {
-      "type": "embed",
+      "type": "link",
       "enabled": true,
       "title": "ICE Activity",
       "description": "Collection of ICE Activity sources",
