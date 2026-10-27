@@ -73,6 +73,14 @@
       "description": "Browse updates from local sources.",
       "button_label": "Load Local Media",
       "panel_title": "Local Media"
+    },
+    {
+      "type": "link",
+      "enabled": true,
+      "title": "Digital Letterbox",
+      "description": "Suggest a resource, report an outdated link, or share feedback.",
+      "button_label": "Send Feedback",
+      "url": "https://forms.gle/iPsVVdThTcscaAPo7"
     }
   ],
   "footer_links": []
