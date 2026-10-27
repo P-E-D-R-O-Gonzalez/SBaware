@@ -1,20 +1,58 @@
 {
   "sections": [
     {
-      "type": "text",
+      "type": "embed",
       "enabled": true,
-      "title": "City open data",
-      "description": "City data resources will be added here."
+      "title": "SB Access Online",
+      "url": "https://www.sanbernardino.gov/1011/SB-Access-Online-Virtual-City-Hall",
+      "embed_url": "https://www.sanbernardino.gov/1011/SB-Access-Online-Virtual-City-Hall",
+      "button_label": "Open SB Access",
+      "description": "This site is designed to provide our residents, businesses and visitors with a Virtual City Hall, giving you the opportunity to access City Hall, 24-hours a day, 7-days a week, from the comfort of your own home."
     },
     {
       "type": "embed",
       "enabled": true,
-      "title": "Flock Map",
-      "description": "Find mapped camera locations.",
-      "button_label": "Load Flock map",
-      "url": "https://maps.deflock.org/",
-      "embed_url": "https://maps.deflock.org/",
-      "panel_title": "Flock map"
+      "title": "SB Mapping",
+      "description": "Here you will find some of the interactive maps that the City of San Bernardino staff and citizens use on a daily basis.",
+      "button_label": "View GIS",
+      "embed_url": "https://www.sanbernardino.gov/1111/GIS-Mapping",
+      "url": "https://www.sanbernardino.gov/1111/GIS-Mapping"
+    },
+    {
+      "type": "embed",
+      "enabled": true,
+      "title": "SB Census Data",
+      "button_label": "View Census Data",
+      "url": "https://data.census.gov/profile/San_Bernardino_city,_California?g=160XX00US0665000",
+      "embed_url": "https://data.census.gov/profile/San_Bernardino_city,_California?g=160XX00US0665000",
+      "description": "The U.S. Census Bureau provides data about the nation’s people and economy. Every 10 years, it conducts a census counting every resident in the United States."
+    },
+    {
+      "type": "embed",
+      "enabled": true,
+      "title": "City Data",
+      "url": "https://www.city-data.com/city/San-Bernardino-California.html",
+      "embed_url": "https://www.city-data.com/city/San-Bernardino-California.html",
+      "button_label": "View City Data",
+      "description": "Stats about all US cities - real estate, relocation info, crime, house prices, schools, races, income, photos, sex offenders, maps, education, weather, home value estimator, recent sales, etc."
+    },
+    {
+      "type": "embed",
+      "enabled": true,
+      "title": "SB County Data Portal",
+      "description": "Explore the categories and featured data to find maps, dashboards, charts, and other visualizations that help tell the story of San Bernardino County.",
+      "button_label": "View County Data",
+      "url": "https://open.sbcounty.gov/",
+      "embed_url": "https://open.sbcounty.gov/"
+    },
+    {
+      "type": "link",
+      "enabled": true,
+      "title": "Crime Mapping",
+      "button_label": "View Crime Map",
+      "url": "https://www.crimemapping.com/map/location/San%20Bernardino%2C%20CA%2C%20USA?id=dHA9MCN0dj02NWI4NWUyYyNsb2M9MjEyODQzNiNsbmc9NDEjcGw9MTI4NTY5MSNsYnM9MTQ6Njk0MjI0NDcjbG49V29ybGQ%3D",
+      "embed_url": "https://www.crimemapping.com/map/location/San%20Bernardino%2C%20CA%2C%20USA?id=dHA9MCN0dj02NWI4NWUyYyNsb2M9MjEyODQzNiNsbmc9NDEjcGw9MTI4NTY5MSNsYnM9MTQ6Njk0MjI0NDcjbG49V29ybGQ%3D",
+      "description": "We extract data from the existing records system at each participating law enforcement agency through an automated import process. The data we display will always be the most current available."
     }
   ]
 }
