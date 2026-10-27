@@ -24,7 +24,7 @@
       "title": "SB Data Hub",
       "description": "Explore public city data.",
       "button_label": "Explore City Data",
-      "url": "/data",
+      "url": "https://sb.ieaware.org/data/",
       "embed_url": "",
       "panel_title": " open city data"
     },
