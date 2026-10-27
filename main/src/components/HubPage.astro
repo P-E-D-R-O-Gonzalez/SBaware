@@ -14,9 +14,16 @@ const homepage = readHomepage(content);
 ---
 
 <Layout title={pageTitle}>
-  <div id="homepage-background" aria-hidden="true"></div>
-  <div class="hub">
+  <div id="homepage-background" class:list={{ 'mountain-background': !pageTitle }} aria-hidden="true"></div>
+  <div class:list={['hub', { 'mountain-home': !pageTitle }]}>
     <header>
+      {!pageTitle && <svg class="mountain-range" viewBox="0 0 1440 270" preserveAspectRatio="xMidYMax slice" aria-hidden="true" focusable="false">
+        <path fill="#b99a32" d="M0 180 175 112 290 143 455 64 575 135 720 50 875 139 1010 85 1210 157 1440 101V270H0Z" />
+        <path fill="#7293a5" d="M0 215 170 139 302 181 465 87 580 164 727 72 875 167 1015 111 1200 186 1440 128V270H0Z" />
+        <path fill="#f8faf9" d="m0 246 154-52 103 20L414 81l66 46 65-72 194 159 96-55 77 38L1064 69l184 157 83-34 109 51v27H0Z" />
+        <path fill="#c7d9e2" d="m257 214 157-133-49 97 43-16-16 37 88-72-14 42 79-114-36 102 38-20 24 49-12-62 180 90-194-159-65 72-66-46Zm655-17 152-128-39 97 44-23 18 42-4-71 165 112-184-157Z" />
+        <path fill="#e5edf0" d="m0 258 226-25 125 22 223-34 214 33 217-28 209 26 226-17v35H0Z" />
+      </svg>}
       {pageTitle ? <><div><Brand /></div><h1>{pageTitle}</h1><BackToSite /></> : <h1><Brand /></h1>}
       <time id="date">Date</time>
       <time id="clock">Time</time>
@@ -292,6 +299,90 @@ const homepage = readHomepage(content);
     min-height: 44px;
     text-underline-offset: 4px;
     line-height: 1.5;
+  }
+
+  /* Home-only palette and ridgeline inspired by the county flag. */
+  #homepage-background.mountain-background {
+    background: linear-gradient(180deg, #123b56 0, #214c65 440px, #e5edf0 440px, #f4f6f5 100%);
+  }
+  .mountain-home { color: #153c55; gap: 24px; }
+  .mountain-home header {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    padding: 32px 32px 205px;
+    border: 1px solid #527287;
+    border-top: 4px solid #c5a13a;
+    border-radius: 16px;
+    background: #103750;
+    color: #fff;
+    box-shadow: 0 12px 32px #071f3226;
+  }
+  .mountain-home header::after {
+    content: '★  ★  ★  ★  ★';
+    position: absolute;
+    bottom: 155px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #d7b54e;
+    font-size: 22px;
+    letter-spacing: 8px;
+    white-space: nowrap;
+    z-index: -1;
+  }
+  .mountain-range {
+    position: absolute;
+    z-index: -1;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 190px;
+    pointer-events: none;
+  }
+  .mountain-home h1 { margin: 0; font-size: clamp(30px, 4vw, 48px); letter-spacing: -1.5px; }
+  .mountain-home h1 :global(.brand) { text-decoration: none; }
+  .mountain-home #date, .mountain-home #clock { color: #e5edf0; font-size: 15px; }
+  .mountain-home :global(.conditions) {
+    padding: 16px 20px;
+    border: 1px solid #58768a;
+    border-radius: 10px;
+    background: #20465e;
+    color: #fff;
+  }
+  .mountain-home :global(.conditions dt), .mountain-home :global(.conditions small) { color: #dbe7ee; }
+  .mountain-home .box {
+    border-color: #cbd9e0;
+    border-top: 3px solid #c5a13a;
+    background: #fff;
+    color: #153c55;
+    box-shadow: 0 5px 16px #123b5609;
+  }
+  .mountain-home .card-description { color: #4c6372; }
+  .mountain-home .load-frame, .mountain-home .card-action {
+    border-color: #b9962d;
+    background: #d7b54e;
+    color: #102f45;
+  }
+  .mountain-home .load-frame:hover, .mountain-home .card-action:hover {
+    background: #e8c968;
+    border-color: #d7b54e;
+    color: #102f45;
+  }
+  .mountain-home .source-link, .mountain-home .source-link:visited { color: #244e68; }
+  .mountain-home footer { background: #103750; border-color: #103750; border-bottom: 3px solid #c5a13a; }
+  .mountain-home footer a, .mountain-home footer a:visited { color: #f8faf9; }
+  .mountain-home footer a:hover { color: #e8c968; }
+  .mountain-home a:focus-visible, .mountain-home button:focus-visible { outline-color: #b58b16; }
+  :global(body:has(.mountain-home) .top-bar) { background: #f8faf9; border-bottom-color: #c5a13a; }
+  :global(body:has(.mountain-home) .slogan) { color: #153c55; }
+  :global(body:has(.mountain-home) .language-bar button) { border-color: #8b9faa; color: #153c55; }
+  :global(body:has(.mountain-home) .language-bar button[aria-pressed='true']) { background: #153c55; color: #fff; border-color: #153c55; }
+  @media (max-width: 767px) {
+    .mountain-home header { padding: 24px 20px 185px; gap: 18px; }
+    .mountain-home h1 { flex-basis: 100%; }
+    .mountain-home :global(.conditions) { width: 100%; box-sizing: border-box; }
+    .mountain-range { height: 165px; }
+    .mountain-home header::after { bottom: 140px; font-size: 16px; letter-spacing: 5px; }
   }
 </style>
 
