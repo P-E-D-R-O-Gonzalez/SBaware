@@ -443,6 +443,38 @@
     {
       "en": "{title} | {brand}",
       "es": "{title} | {brand}"
+    },
+    {
+      "en": "About",
+      "es": "Acerca de"
+    },
+    {
+      "en": "SB Aware is built by",
+      "es": "SB Aware fue creado por"
+    },
+    {
+      "en": "who works at the intersection of AI, cybersecurity, computer science, and social impact. Driven by purpose and resilience, Pedro is committed to empowering underrepresented students in STEM and underserved communities. He prioritizes students and real impact.",
+      "es": "quien trabaja en la intersección de la inteligencia artificial, la ciberseguridad, la informática y el impacto social. Impulsado por su propósito y resiliencia, Pedro está comprometido con brindar oportunidades a estudiantes de grupos subrepresentados en ciencia, tecnología, ingeniería y matemáticas (STEM) y a comunidades con acceso limitado a recursos. Su prioridad son los estudiantes y generar un impacto real."
+    },
+    {
+      "en": "I built SB Aware to make local information and civic participation easier to access. The platform is designed to be replicated by other cities, with low launch and maintenance costs and a no-code CMS that anyone can manage.",
+      "es": "Creé SB Aware para facilitar el acceso a la información local y la participación ciudadana. La plataforma está diseñada para que otras ciudades puedan replicarla, con bajos costos de puesta en marcha y mantenimiento y un sistema de gestión de contenidos (CMS) que cualquier persona puede administrar sin necesidad de programar."
+    },
+    {
+      "en": "Our content draws from a mix of sources, including the City of San Bernardino, local community organizations, the Inland Empire, and surrounding regions.",
+      "es": "Nuestro contenido proviene de diversas fuentes, entre ellas la Ciudad de San Bernardino, organizaciones comunitarias locales, el Inland Empire y las regiones cercanas."
+    },
+    {
+      "en": "SB Aware is an independent project and is not operated by or affiliated with the City of San Bernardino.",
+      "es": "SB Aware es un proyecto independiente y no es administrado por la Ciudad de San Bernardino ni está afiliado a ella."
+    },
+    {
+      "en": "To submit a correction or request, please use our",
+      "es": "Para enviar una corrección o solicitud, utiliza nuestro"
+    },
+    {
+      "en": "digital letterbox",
+      "es": "buzón digital"
     }
   ]
 }

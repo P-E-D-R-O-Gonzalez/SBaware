@@ -1,7 +1,7 @@
 {
   "sections": [
     {
-      "type": "embed",
+      "type": "link",
       "enabled": true,
       "title": "SB Access Online",
       "url": "https://www.sanbernardino.gov/1011/SB-Access-Online-Virtual-City-Hall",
@@ -10,7 +10,7 @@
       "description": "This site is designed to provide our residents, businesses and visitors with a Virtual City Hall, giving you the opportunity to access City Hall, 24-hours a day, 7-days a week, from the comfort of your own home."
     },
     {
-      "type": "embed",
+      "type": "link",
       "enabled": true,
       "title": "SB Mapping",
       "description": "Here you will find some of the interactive maps that the City of San Bernardino staff and citizens use on a daily basis.",

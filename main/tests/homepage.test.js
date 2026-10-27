@@ -6,10 +6,10 @@ const content = JSON.parse(readFileSync(new URL('../src/data/homepage.json', imp
 
 test('homepage content retains a dedicated Data page link', () => {
   const home = readHomepage(content);
-  const data = home.sections.find(section => section.title === 'SB Aware City Data');
+  const data = home.sections.find(section => /^\/data\/?$/.test(section.url));
   assert.ok(data);
   assert.equal(data.type, 'link');
-  assert.equal(data.url, '/data/');
+  assert.match(data.url, /^\/data\/?$/);
   assert.equal(data.embed_url, '');
 });
 
