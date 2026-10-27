@@ -83,5 +83,10 @@
       "url": "https://forms.gle/iPsVVdThTcscaAPo7"
     }
   ],
-  "footer_links": []
+  "footer_links": [
+    {
+      "label": "About Us",
+      "url": "https://fontanaware.org/about-us"
+    }
+  ]
 }
