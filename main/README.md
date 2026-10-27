@@ -16,7 +16,7 @@ Cloudflare hosting, and your site name. Open the generated `SETUP-CHECKLIST.md`
 for the remaining account and secret steps. Never enter secrets into the wizard.
 No configuration files need to be edited manually.
 
-Once connected, use `/admin/` to edit the Home page, Branding, Weather, Local Groups,
+Once connected, use `/admin/` to edit the Home page, Data, Branding, Weather, Local Groups,
 and Local Media. Replace example links before sharing your website.
 
 ## Languages
@@ -67,3 +67,12 @@ See [CMS documentation](docs/decap.md#editing-the-logo-and-favicon).
 Edit **Pages → Weather** in `/admin/` to change the location label, coordinates,
 temperature and wind units, or hide the weather/air-quality panel. Publish and
 rebuild to apply changes.
+
+## Home and Data page cards
+
+Open **Pages → Home page → Sections** to edit the home page cards.
+Open **Pages → Data → Sections** to edit the Data page cards. Both editors support
+links, embedded websites, text, and Local Media, with visibility and ordering controls.
+The footer on both pages is edited under **Home page → Footer links**.
+Publish and rebuild to apply changes. New CMS entries and their content files must
+be pushed to the configured GitHub branch and deployed before the live editor can use them.

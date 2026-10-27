@@ -21,7 +21,6 @@
     {
       "type": "embed",
       "enabled": true,
-<<<<<<< HEAD
       "title": "On Demand Videos",
       "description": "Watch recorded city programs.",
       "button_label": "Load Videos",
@@ -50,10 +49,7 @@
     {
       "type": "embed",
       "enabled": true,
-      "title": "Your Page name TV",
-=======
       "title": "IEMG TV3",
->>>>>>> ede959ce0c515eeb95125864a9e452a259e533b5
       "description": "Watch the local city broadcast.",
       "button_label": "Load TV",
       "url": "https://reflect-sanbernardino.cablecast.tv/internetchannel/?channel=6",
