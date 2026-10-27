@@ -1,9 +1,9 @@
   /* Shared palette and ridgeline inspired by the county flag. */
-  #homepage-background.mountain-background {
+  body.site-theme #homepage-background.mountain-background {
     background: linear-gradient(180deg, #123b56 0, #214c65 440px, #e5edf0 440px, #f4f6f5 100%);
   }
-  .mountain-theme { color: #153c55; gap: 24px; }
-  .mountain-theme header {
+  body.site-theme .mountain-theme { color: #153c55; gap: 24px; }
+  body.site-theme .mountain-theme header {
     position: relative;
     isolation: isolate;
     overflow: hidden;
@@ -24,75 +24,83 @@
     height: 160px;
     pointer-events: none;
   }
-  .mountain-theme h1 { margin: 0; font-size: clamp(30px, 4vw, 48px); letter-spacing: -1.5px; }
-  .mountain-theme h1 .brand { text-decoration: none; }
-  .mountain-theme #date, .mountain-theme #clock { color: #e5edf0; font-size: 15px; }
-  .mountain-theme .conditions {
+  body.site-theme .mountain-theme h1 { margin: 0; font-size: clamp(30px, 4vw, 48px); letter-spacing: -1.5px; }
+  body.site-theme .mountain-theme h1 .brand { text-decoration: none; }
+  body.site-theme .mountain-theme #date, body.site-theme .mountain-theme #clock { color: #e5edf0; font-size: 15px; }
+  body.site-theme .mountain-theme .conditions {
     padding: 16px 20px;
     border: 1px solid #58768a;
     border-radius: 10px;
     background: #20465e;
     color: #fff;
   }
-  .mountain-theme .conditions dt, .mountain-theme .conditions small { color: #dbe7ee; }
-  .mountain-theme .box {
+  body.site-theme .mountain-theme .conditions dt, body.site-theme .mountain-theme .conditions small { color: #dbe7ee; }
+  body.site-theme .mountain-theme .box {
     border-color: #cbd9e0;
     border-top: 3px solid #c5a13a;
     background: #fff;
     color: #153c55;
     box-shadow: 0 5px 16px #123b5609;
   }
-  .mountain-theme .card-description { color: #4c6372; }
-  .mountain-theme .load-frame, .mountain-theme .card-action {
+  body.site-theme .mountain-theme .card-description { color: #4c6372; }
+  body.site-theme .mountain-theme .load-frame, body.site-theme .mountain-theme .card-action {
     border-color: #b9962d;
     background: #d7b54e;
     color: #102f45;
   }
-  .mountain-theme .load-frame:hover, .mountain-theme .card-action:hover {
+  body.site-theme .mountain-theme .load-frame:hover, body.site-theme .mountain-theme .card-action:hover {
     background: #e8c968;
     border-color: #d7b54e;
     color: #102f45;
   }
-  .mountain-theme .source-link, .mountain-theme .source-link:visited { color: #244e68; }
-  .mountain-theme footer { background: #103750; border-color: #103750; border-bottom: 3px solid #c5a13a; }
-  .mountain-theme footer a, .mountain-theme footer a:visited { color: #f8faf9; }
-  .mountain-theme footer a:hover { color: #e8c968; }
-  .mountain-theme a:focus-visible, .mountain-theme button:focus-visible { outline-color: #b58b16; }
-  body:has(.mountain-theme .top-bar) { background: #f8faf9; border-bottom-color: #c5a13a; }
-  body:has(.mountain-theme .slogan) { color: #153c55; }
-  body:has(.mountain-theme .language-bar button) { border-color: #8b9faa; color: #153c55; }
-  body:has(.mountain-theme .language-bar button[aria-pressed='true']) { background: #153c55; color: #fff; border-color: #153c55; }
+  body.site-theme .mountain-theme .source-link, body.site-theme .mountain-theme .source-link:visited { color: #244e68; }
+  body.site-theme .mountain-theme footer { background: #103750; border-color: #103750; border-bottom: 3px solid #c5a13a; }
+  body.site-theme .mountain-theme footer a, body.site-theme .mountain-theme footer a:visited { color: #f8faf9; }
+  body.site-theme .mountain-theme footer a:hover { color: #e8c968; }
+  body.site-theme .mountain-theme a:focus-visible, body.site-theme .mountain-theme button:focus-visible { outline-color: #b58b16; }
+  body.site-theme .top-bar { background: #f8faf9; border-bottom-color: #c5a13a; }
+  body.site-theme .slogan { color: #153c55; }
+  body.site-theme .language-bar button { border-color: #8b9faa; color: #153c55; }
+  body.site-theme .language-bar button[aria-pressed='true'] { background: #153c55; color: #fff; border-color: #153c55; }
   @media (max-width: 767px) {
-    .mountain-theme header { padding: 24px 20px 150px; gap: 18px; }
-    .mountain-theme h1 { flex-basis: 100%; }
-    .mountain-theme .conditions { width: 100%; box-sizing: border-box; }
+    body.site-theme .mountain-theme header { padding: 24px 20px 150px; gap: 18px; }
+    body.site-theme .mountain-theme h1 { flex-basis: 100%; }
+    body.site-theme .mountain-theme .conditions { width: 100%; box-sizing: border-box; }
     .mountain-range { height: 130px; }
+  }
   
   body.site-theme { background: #f4f6f5; color: #153c55; font-family: Arial, Helvetica, sans-serif; }
-  .mountain-theme header a { color: #fff; }
-  .mountain-theme header a:hover { color: #e8c968; }
-  .mountain-theme header a:focus-visible { outline-color: #e8c968; }
-  .mountain-theme.mountain-page {
+  body.site-theme .mountain-theme header a { color: #fff; }
+  body.site-theme .mountain-theme header a:hover { color: #e8c968; }
+  body.site-theme .mountain-theme header a:focus-visible { outline-color: #e8c968; }
+  body.site-theme .mountain-theme.mountain-page {
     background: linear-gradient(180deg, #123b56, #214c65 440px, #e5edf0 440px, #f4f6f5);
     color: #153c55;
   }
-  .mountain-theme.mountain-page header { padding-bottom: 175px; }
-  .mountain-theme.mountain-page header h1 { margin: 20px 0 12px; }
-  .mountain-theme.mountain-page header > div { margin-bottom: 12px; font-size: 24px; font-weight: 700; }
-  .mountain-theme.mountain-page header > p { color: #dbe7ee; }
-  .mountain-theme.mountain-page main, .mountain-theme.mountain-page .content,
-  .mountain-theme .about-content {
+  body.site-theme .mountain-theme.mountain-page header { padding-bottom: 175px; }
+  body.site-theme .mountain-theme.mountain-page header h1 { margin: 20px 0 12px; }
+  body.site-theme .mountain-theme.mountain-page header > div { margin-bottom: 12px; font-size: 24px; font-weight: 700; }
+  body.site-theme .mountain-theme.mountain-page header > p { color: #dbe7ee; }
+  body.site-theme .mountain-theme.mountain-page main, body.site-theme .mountain-theme.mountain-page .content,
+  body.site-theme .mountain-theme .about-content {
     border-color: #cbd9e0; border-top: 3px solid #c5a13a; color: #153c55;
     box-shadow: 0 5px 16px #123b5609;
   }
-  .mountain-theme.mountain-page main a, .mountain-theme.mountain-page .content a,
-  .mountain-theme .about-content a { color: #244e68; text-underline-offset: 3px; }
-  .mountain-theme.mountain-page select { border-color: #8b9faa; color: #153c55; background: #f8faf9; }
-  .mountain-theme.mountain-page .group-entries li { border-color: #cbd9e0; }
-  .mountain-theme.mountain-page .placeholder, .mountain-theme.mountain-page #selection-hint { color: #4c6372; }
-  .mountain-theme.mountain-page select:focus-visible,
-  .mountain-theme.mountain-page .content a:focus-visible { outline: 3px solid #b58b16; outline-offset: 3px; }
+  body.site-theme .mountain-theme.mountain-page main a, body.site-theme .mountain-theme.mountain-page .content a,
+  body.site-theme .mountain-theme .about-content a { color: #244e68; text-underline-offset: 3px; }
+  body.site-theme .mountain-theme.mountain-page select { border-color: #8b9faa; color: #153c55; background: #f8faf9; }
+  body.site-theme .mountain-theme.mountain-page .group-entries li { border-color: #cbd9e0; }
+  body.site-theme .mountain-theme.mountain-page .placeholder, body.site-theme .mountain-theme.mountain-page #selection-hint { color: #4c6372; }
+  body.site-theme .mountain-theme.mountain-page select:focus-visible,
+  body.site-theme .mountain-theme.mountain-page .content a:focus-visible { outline: 3px solid #b58b16; outline-offset: 3px; }
   @media (max-width: 767px) {
-    .mountain-theme.mountain-page header { padding-bottom: 150px; }
+    body.site-theme .mountain-theme.mountain-page header { padding-bottom: 150px; }
   }
-.mountain-theme.mountain-page header a { color: #fff; }
+body.site-theme .mountain-theme.mountain-page header a { color: #fff; }
+body.site-theme .mountain-theme .instagram-viewer { background: #f4f6f5; color: #153c55; border-color: #cbd9e0; }
+body.site-theme .mountain-theme .instagram-viewer p { color: #4c6372; }
+body.site-theme .mountain-theme .instagram-viewer button { background: #d7b54e; color: #102f45; border-color: #b9962d; }
+body.site-theme .mountain-theme .instagram-viewer button:hover { background: #e8c968; }
+body.site-theme .mountain-theme .instagram-viewer select { background: #f8faf9; color: #153c55; border-color: #8b9faa; }
+body.site-theme .mountain-theme .feed-card { border-color: #cbd9e0; border-top: 3px solid #c5a13a; }
+body.site-theme .mountain-theme .feed-card a { color: #244e68; }
