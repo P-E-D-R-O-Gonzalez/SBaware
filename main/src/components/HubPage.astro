@@ -17,7 +17,7 @@ const homepage = readHomepage(content);
   <div id="homepage-background" class:list={{ 'mountain-background': !pageTitle }} aria-hidden="true"></div>
   <div class:list={['hub', { 'mountain-home': !pageTitle }]}>
     <header>
-      {!pageTitle && <svg class="mountain-range" viewBox="0 0 1440 270" preserveAspectRatio="xMidYMax slice" aria-hidden="true" focusable="false">
+      {!pageTitle && <svg class="mountain-range" viewBox="0 0 1440 270" preserveAspectRatio="none" aria-hidden="true" focusable="false">
         <path fill="#b99a32" d="M0 180 175 112 290 143 455 64 575 135 720 50 875 139 1010 85 1210 157 1440 101V270H0Z" />
         <path fill="#7293a5" d="M0 215 170 139 302 181 465 87 580 164 727 72 875 167 1015 111 1200 186 1440 128V270H0Z" />
         <path fill="#f8faf9" d="m0 246 154-52 103 20L414 81l66 46 65-72 194 159 96-55 77 38L1064 69l184 157 83-34 109 51v27H0Z" />
@@ -310,7 +310,7 @@ const homepage = readHomepage(content);
     position: relative;
     isolation: isolate;
     overflow: hidden;
-    padding: 32px 32px 205px;
+    padding: 32px 32px 175px;
     border: 1px solid #527287;
     border-top: 4px solid #c5a13a;
     border-radius: 16px;
@@ -318,25 +318,13 @@ const homepage = readHomepage(content);
     color: #fff;
     box-shadow: 0 12px 32px #071f3226;
   }
-  .mountain-home header::after {
-    content: '★  ★  ★  ★  ★';
-    position: absolute;
-    bottom: 155px;
-    left: 50%;
-    transform: translateX(-50%);
-    color: #d7b54e;
-    font-size: 22px;
-    letter-spacing: 8px;
-    white-space: nowrap;
-    z-index: -1;
-  }
   .mountain-range {
     position: absolute;
     z-index: -1;
     bottom: -1px;
     left: 0;
     width: 100%;
-    height: 190px;
+    height: 160px;
     pointer-events: none;
   }
   .mountain-home h1 { margin: 0; font-size: clamp(30px, 4vw, 48px); letter-spacing: -1.5px; }
@@ -378,11 +366,9 @@ const homepage = readHomepage(content);
   :global(body:has(.mountain-home) .language-bar button) { border-color: #8b9faa; color: #153c55; }
   :global(body:has(.mountain-home) .language-bar button[aria-pressed='true']) { background: #153c55; color: #fff; border-color: #153c55; }
   @media (max-width: 767px) {
-    .mountain-home header { padding: 24px 20px 185px; gap: 18px; }
+    .mountain-home header { padding: 24px 20px 150px; gap: 18px; }
     .mountain-home h1 { flex-basis: 100%; }
     .mountain-home :global(.conditions) { width: 100%; box-sizing: border-box; }
-    .mountain-range { height: 165px; }
-    .mountain-home header::after { bottom: 140px; font-size: 16px; letter-spacing: 5px; }
-  }
-</style>
+    .mountain-range { height: 130px; }
+  </style>
 
