@@ -17,7 +17,7 @@ const { slogan } = readBranding(content);
   let language = 'en';
   try { if (localStorage.getItem('site-language') === 'es') language = 'es'; } catch {}
   const buttons = document.querySelectorAll<HTMLButtonElement>('[data-language]');
-  const attributes = ['aria-label', 'title', 'data-title'];
+  const attributes = ['aria-label', 'title', 'data-title', 'alt', 'placeholder'];
   const originals = new WeakMap<Node, Map<string, { original: string; rendered: string }>>();
   function localize(node: Node, key: string, current: string) {
     let values = originals.get(node);
@@ -32,6 +32,8 @@ const { slogan } = readBranding(content);
   // Text nodes preserve child elements, event handlers, selected options, and loaded embeds.
   function translatePage() {
     observer.disconnect();
+    const title = document.querySelector('title');
+    if (title) title.textContent = localize(title, 'text', title.textContent ?? '');
     const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
     while (walker.nextNode()) {
       const node = walker.currentNode;
@@ -39,7 +41,7 @@ const { slogan } = readBranding(content);
       const value = localize(node, 'text', node.textContent ?? '');
       if (value !== node.textContent) node.textContent = value;
     }
-    document.querySelectorAll<HTMLElement>('[aria-label], [title], [data-title]').forEach(element => {
+    document.querySelectorAll<HTMLElement>(attributes.map(attribute => `[${attribute}]`).join(', ')).forEach(element => {
       if (element.closest('.language-bar, [translate="no"]')) return;
       attributes.forEach(attribute => {
         const value = element.getAttribute(attribute);

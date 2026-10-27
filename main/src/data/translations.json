@@ -307,6 +307,142 @@
     {
       "en": "City data resources will be added here.",
       "es": "Los recursos de datos de la ciudad se agregarán aquí."
+    },
+    {
+      "en": "SB Data Hub",
+      "es": "Centro de datos de San Bernardino"
+    },
+    {
+      "en": "Explore public city data.",
+      "es": "Explora los datos públicos de la ciudad."
+    },
+    {
+      "en": "Explore City Data",
+      "es": "Explorar datos de la ciudad"
+    },
+    {
+      "en": "open city data",
+      "es": "datos abiertos de la ciudad"
+    },
+    {
+      "en": "Find the cheapest fuel no matter the type near you",
+      "es": "Encuentra el combustible más barato cerca de ti, de cualquier tipo"
+    },
+    {
+      "en": "Find Cheap Gas",
+      "es": "Buscar gasolina barata"
+    },
+    {
+      "en": "Load TV",
+      "es": "Cargar TV"
+    },
+    {
+      "en": "ICE Activity",
+      "es": "Actividad de ICE"
+    },
+    {
+      "en": "Collection of ICE Activity sources",
+      "es": "Recopilación de fuentes sobre la actividad de ICE"
+    },
+    {
+      "en": "Be Informed",
+      "es": "Infórmate"
+    },
+    {
+      "en": "Digital Letterbox",
+      "es": "Buzón digital"
+    },
+    {
+      "en": "Suggest a resource, report an outdated link, or share feedback.",
+      "es": "Sugiere un recurso, informa sobre un enlace desactualizado o comparte tus comentarios."
+    },
+    {
+      "en": "Send Feedback",
+      "es": "Enviar comentarios"
+    },
+    {
+      "en": "About Us",
+      "es": "Quiénes somos"
+    },
+    {
+      "en": "SB Access Online",
+      "es": "Acceso en línea a San Bernardino"
+    },
+    {
+      "en": "Open SB Access",
+      "es": "Abrir acceso a San Bernardino"
+    },
+    {
+      "en": "This site is designed to provide our residents, businesses and visitors with a Virtual City Hall, giving you the opportunity to access City Hall, 24-hours a day, 7-days a week, from the comfort of your own home.",
+      "es": "Este sitio ofrece a residentes, empresas y visitantes un ayuntamiento virtual, para acceder a los servicios municipales las 24 horas del día, los 7 días de la semana, desde la comodidad de su hogar."
+    },
+    {
+      "en": "SB Mapping",
+      "es": "Mapas de San Bernardino"
+    },
+    {
+      "en": "Here you will find some of the interactive maps that the City of San Bernardino staff and citizens use on a daily basis.",
+      "es": "Aquí encontrarás algunos de los mapas interactivos que el personal municipal y los habitantes de San Bernardino utilizan a diario."
+    },
+    {
+      "en": "View GIS",
+      "es": "Ver mapas SIG"
+    },
+    {
+      "en": "SB Census Data",
+      "es": "Datos del censo de San Bernardino"
+    },
+    {
+      "en": "View Census Data",
+      "es": "Ver datos del censo"
+    },
+    {
+      "en": "The U.S. Census Bureau provides data about the nation’s people and economy. Every 10 years, it conducts a census counting every resident in the United States.",
+      "es": "La Oficina del Censo de Estados Unidos proporciona datos sobre la población y la economía del país. Cada 10 años realiza un censo que cuenta a todas las personas que residen en Estados Unidos."
+    },
+    {
+      "en": "City Data",
+      "es": "Datos de la ciudad"
+    },
+    {
+      "en": "Stats about all US cities - real estate, relocation info, crime, house prices, schools, races, income, photos, sex offenders, maps, education, weather, home value estimator, recent sales, etc.",
+      "es": "Estadísticas sobre todas las ciudades de Estados Unidos: bienes raíces, información para mudarse, delincuencia, precios de viviendas, escuelas, grupos raciales, ingresos, fotos, agresores sexuales, mapas, educación, clima, estimación del valor de viviendas, ventas recientes, etc."
+    },
+    {
+      "en": "SB County Data Portal",
+      "es": "Portal de datos del condado de San Bernardino"
+    },
+    {
+      "en": "Explore the categories and featured data to find maps, dashboards, charts, and other visualizations that help tell the story of San Bernardino County.",
+      "es": "Explora las categorías y los datos destacados para encontrar mapas, paneles, gráficos y otras visualizaciones que ayudan a conocer el condado de San Bernardino."
+    },
+    {
+      "en": "View County Data",
+      "es": "Ver datos del condado"
+    },
+    {
+      "en": "Crime Mapping",
+      "es": "Mapa de delitos"
+    },
+    {
+      "en": "View Crime Map",
+      "es": "Ver mapa de delitos"
+    },
+    {
+      "en": "We extract data from the existing records system at each participating law enforcement agency through an automated import process. The data we display will always be the most current available.",
+      "es": "Extraemos datos del sistema de registros de cada agencia policial participante mediante un proceso de importación automatizado. Los datos que mostramos siempre serán los más recientes disponibles."
+    },
+    {
+      "en": "No categories have been added yet.",
+      "es": "Todavía no se han agregado categorías."
+    },
+    {
+      "en": "{title} resources",
+      "es": "Recursos de {title}"
+    },
+    {
+      "en": "{title} | {brand}",
+      "es": "{title} | {brand}"
     }
   ]
 }
