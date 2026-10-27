@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "pg77773333",
+  "name": "sbaware",
   "main": "worker/index.js",
   "compatibility_date": "2026-09-24",
   "assets": {
@@ -12,7 +12,7 @@
     ]
   },
   "vars": {
-    "SITE_ORIGIN": "https://test.pg77773333.workers.dev",
-    "GITHUB_REPO": "P-E-D-R-O-Gonzalez/test"
+    "SITE_ORIGIN": "https://sb.ieaware.org",
+    "GITHUB_REPO": "P-E-D-R-O-Gonzalez/SBaware"
   }
 }
