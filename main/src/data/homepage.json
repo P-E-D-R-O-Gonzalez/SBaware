@@ -24,7 +24,7 @@
       "title": "SB Data Hub",
       "description": "Explore public city data.",
       "button_label": "Explore City Data",
-      "url": "https://sb.ieaware.org/data/",
+      "url": "/data/",
       "embed_url": "",
       "panel_title": " open city data"
     },
@@ -61,10 +61,10 @@
     {
       "type": "link",
       "enabled": true,
-      "title": "ICE Activity",
-      "description": "Collection of ICE Activity sources",
-      "button_label": "Be Informed",
-      "url": "https://fontanaware.org/ice",
+      "title": "ICE Resources",
+      "description": "Hotlines, toolkits, community resources and external information sources.",
+      "button_label": "Browse ICE Resources",
+      "url": "/ice/",
       "embed_url": "",
       "panel_title": ""
     },
@@ -97,6 +97,10 @@
     {
       "label": "About",
       "url": "/about"
+    },
+    {
+      "label": "ICE Resources",
+      "url": "/ice/"
     }
   ]
 }

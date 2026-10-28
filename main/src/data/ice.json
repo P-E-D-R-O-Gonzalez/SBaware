@@ -1,0 +1,101 @@
+{
+  "sections": [
+    {
+      "type": "link",
+      "enabled": true,
+      "title": "Flock Map",
+      "description": "Crowdsourced map of automated license plate reader locations.",
+      "url": "https://maps.deflock.org/?lat=34.0923&lng=-117.4343&zoom=11.00",
+      "button_label": "Open Map"
+    },
+    {
+      "type": "link",
+      "enabled": true,
+      "title": "ICE Plate Tracker",
+      "description": "External vehicle information resource from StopICE.",
+      "button_label": "View Plates",
+      "url": "https://www.stopice.net/platetracker/index.cgi"
+    },
+    {
+      "type": "embed",
+      "enabled": true,
+      "title": "ICE Hotlines",
+      "description": "California Rapid Response Networks",
+      "url": "https://www.ccijustice.org/carrn",
+      "embed_url": "https://www.ccijustice.org/carrn",
+      "button_label": "Find Hotlines"
+    },
+    {
+      "type": "link",
+      "enabled": true,
+      "title": "Alert Network",
+      "description": "External alert network from StopICE.",
+      "url": "https://www.stopice.net/",
+      "button_label": "Get Alerts"
+    },
+    {
+      "type": "link",
+      "enabled": true,
+      "title": "Flock Hopper",
+      "description": "Route planning using camera locations mapped by DeFlock volunteers.",
+      "url": "https://dontgetflocked.com/",
+      "embed_url": "",
+      "button_label": "Find routes"
+    },
+    {
+      "type": "embed",
+      "enabled": true,
+      "title": "ICE resources",
+      "description": "Inland Coalition for Immigrant Justice resources.",
+      "url": "https://ic4ij.org/resources",
+      "embed_url": "https://ic4ij.org/resources",
+      "button_label": "Find Resources"
+    },
+    {
+      "type": "embed",
+      "enabled": true,
+      "title": "ICE Toolkit",
+      "description": "This toolkit provides essential Know Your Rights information to help protect our community in situations involving immigration agents.",
+      "button_label": "View Toolkit",
+      "embed_url": "https://www.ccijustice.org/carrn-toolkit",
+      "url": "https://www.ccijustice.org/carrn-toolkit"
+    },
+    {
+      "type": "link",
+      "enabled": true,
+      "url": "https://iceout.org/en/",
+      "description": "Community information and resources from People Over Papers.",
+      "title": "ICE Out",
+      "button_label": "Open ICE Out"
+    },
+    {
+      "type": "link",
+      "enabled": true,
+      "title": "ICE Activity Tracker",
+      "description": "External ICE activity resource.",
+      "button_label": "See Activity",
+      "url": "https://www.iceinmyarea.org/"
+    },
+    {
+      "type": "media",
+      "enabled": true,
+      "title": "Community Media",
+      "button_label": "Open Media Feed",
+      "panel_title": "Community Media"
+    }
+  ],
+  "sources": [
+    {
+      "username": "fontana.decolonized"
+    },
+    {
+      "username": "we_keep_us_safe_ie"
+    },
+    {
+      "username": "ic4ij"
+    },
+    {
+      "username": "stopicenet"
+    }
+  ]
+}
